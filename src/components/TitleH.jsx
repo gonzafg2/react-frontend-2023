@@ -1,8 +1,16 @@
+const getTitleLS = () => {
+  return localStorage.getItem("title") || "Default Title";
+};
+
+const getSubtitleLS = () => {
+  return localStorage.getItem("subtitle") || "Default Subtitle";
+};
+
 const TitleH = () => {
   return (
     <>
-      <h1>Esta es una App con React</h1>
-      <h2>Curso de Frontend React USACH 2023</h2>
+      <h2>{getSubtitleLS()}</h2>
+      <h1>{getTitleLS()}</h1>
     </>
   );
 };
